@@ -1,0 +1,73 @@
+package model.bo;
+
+public class VagaEstacionamento {
+    private int id;
+    private String descricao;
+    private String obs;
+    private float metragemVaga;
+    private char status;
+
+    public VagaEstacionamento() {
+    }
+
+    public VagaEstacionamento(int id, String descricao, String obs, float metragemVaga, char status) {
+        this.id = id;
+        this.descricao = descricao;
+        this.obs = obs;
+        this.metragemVaga = metragemVaga;
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getObs() {
+        return obs;
+    }
+
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
+
+    public float getMetragemVaga() {
+        return metragemVaga;
+    }
+
+    public void setMetragemVaga(float metragemVaga) {
+        this.metragemVaga = metragemVaga;
+    }
+
+    public char getStatus() {
+        return status;
+    }
+
+    public void setStatus(char status) {
+        if ((status == 'A') || (status == 'C') || (status == 'a') || (status == 'c')) {
+            this.status = status;
+        } else {
+            this.status = 'A';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "ID           = " + this.id + 
+               "\nDescricao    = " + this.descricao + 
+               "\nObs          = " + this.obs + 
+               "\nMetragemVaga = " + this.metragemVaga + 
+               "\nStatus       = " + this.status;
+    }
+}
