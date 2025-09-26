@@ -7,6 +7,7 @@ public class Hospede extends Pessoa {
     private String cnpj;
     private String inscricaoEstadual;
     private String contato;
+    //teste
 
     public Hospede() {
     }
